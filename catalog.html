@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+
+    
+  <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+       <!-- Основные стили -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Каталог — Ювелірна майстерня RMR</title>
+ </head>         
+
+<body>    
+    <header class="site-header">
+        <div class="container-fluid">
+        <div class="row align-items-center">
+    
+        <!-- ЛЕВАЯ ЧАСТЬ МЕНЮ -->    
+        <div class="col-lg-5 col-md-5 col-4">
+        <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav flex-row gap-lg-4 gap-2">
+                <li class="nav-item ">  <a class="nav-link" href="index.html"> Головна </a> </li>   
+                <li class="nav-item active"> <a class="nav-link"  href="catalog.html">  Каталог </a> </li>             
+                                
+            </ul>                    
+        </nav>                            
+        </div>                   
+                                
+        <!-- ЦЕНТРАЛЬНЫЙ ЛОГОТИП -->                          
+        <div class="col-lg-2 col-md-2 col-4">                     
+        <div class="logo-box text-center"> 
+        <img src="images/logotip.png" class="logo img-fluid" alt="Ювелірна майстерня">
+        <div class="diamond-wrap">                       
+        <img src="images/diamond.png" class="logo-diamond" alt="Діамант"> </div>
+         </div> 
+        </div>             
+        <!-- ПРАВАЯ ЧАСТЬ МЕНЮ -->
+        <div class="col-lg-5 col-md-5 col-4">
+        <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav flex-row justify-content-end gap-lg-4 gap-2 w-100"> 
+            <li class="nav-item"> <a class="nav-link" href="packaging.html"> Футляри  </a> </li>
+            <li class="nav-item"> <a class="nav-link" href="contacts.html"> Контакти </a> </li> </ul>
+        </nav>                        
+        </div>                          
+        </div>                           
+        </div>                       
+         </header>                
+
+  
+    <!-- ================= CATALOG ================= -->
+
+    <main class="catalog-page">
+
+        <!--<section class="catalog-header">
+             <p>Оберіть прикрасу, яка стане частиною
+                        вашої особливої історії. </p>
+         </section>-->               
+                   
+                 
+        <!-- ФІЛЬТР -->
+        <div class="catalog-filter">
+            <button class="filter-btn active" data-filter="all">Всі </button>
+            <button class="filter-btn" data-filter="rings"> Кільця </button>
+            <button class="filter-btn" data-filter="earrings"> Сережки </button>    
+            <button class="filter-btn" data-filter="pendants">  Підвіски</button>         
+            <button class="filter-btn" data-filter="bracelets">Браслети</button>
+          </div>       
+        
+        <!-- ТОВАРИ -->
+     <section class="products-grid">
+            
+        <!-- ===== КІЛЬЦЕ 1 ===== -->
+       <article class="product-card"
+         data-category="rings"
+         data-title="Сонячна корона"
+         data-description="Великий круглий діамант у центрі, оточений ореолом із дрібних діамантів. Плечики прикрашені ажурним золотим візерунком із діамантовою розсипкою. Жовте золото."
+         data-price="12 500 ₴"
+         data-category-name="Кільця">   
+     <div class="product-image"> 
+       <img src="images/rings/1.png"  alt="Золота каблучка">
+     <div class="product-overlay"><span> Переглянути </span> </div>    
+     </div>   
+          
+    <div class="product-info">
+        <h2>Сонячна корона</h2>
+        <p>Золота каблучка</p>
+        <span class="product-price"> 12 500 ₴</span>
+      </div>          
+     </article>        
+
+    <!-- ===== КІЛЬЦЕ 2 ===== -->
+    <article class="product-card" 
+            data-category="rings"
+            data-title="Сапфірова ніч"
+            data-description="Овальний синій сапфір в ореолі з круглих діамантів. Плечики з доріжкою дрібних діамантів. Жовте золото."
+            data-price="15 800 ₴"
+            data-category-name="Кільця">      
+    <div class="product-image">
+         <img src="images/rings/2.png" alt="Золота каблучка">       
+      <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>                    
+                         
+    <div class="product-info">
+         <h2>Сапфірова ніч</h2>
+          <p>Золота каблучка</p>      
+       <span class="product-price"> 15 800 ₴</span>
+                       
+     </div>               
+     </article>                   
+
+       <!-- ===== КІЛЬЦЕ 3 ===== -->
+    <article class="product-card" 
+            data-category="rings"
+            data-title="Мереживо"
+            data-description="Широка ажурна шинка з переплетеним золотим візерунком. У центрі ромбоподібний елемент, оздоблений дрібними діамантами. Жовте золото."
+            data-price="18 200 ₴"
+            data-category-name="Кільця">  
+        <div class="product-image">
+             <img src="images/rings/3.png" alt="Золота каблучка">
+        <div class="product-overlay"><span>Переглянути</span> </div>
+         </div>       
+         <div class="product-info">
+               <h2>Мереживо</h2>
+               <p>Золота каблучка</p>
+               <span class="product-price">18 200 ₴</span>
+        </div>
+    </article> 
+           
+           <!-- ===== КІЛЬЦЕ 4 ===== -->
+    <article class="product-card" 
+        data-category="rings"
+        data-title="Принцеса"
+        data-description="Діамант огранки принцеса у ковалих лапках. Плечики з доріжкою дрібних діамантів. Біле золото (за фото метал виглядає світлішим, ніж в інших виробах, тому це варто уточнити)."
+        data-price="25 000 ₴"
+        data-category-name="Кільця">  
+<div class="product-image">
+     <img src="images/rings/4.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+ </div>       
+ <div class="product-info">
+        <h2>Принцеса</h2>
+        <p>Золота каблучка</p>
+        <span class="product-price">25 000 ₴</span>
+</div>
+</article>
+
+      <!-- ===== КІЛЬЦЕ 5 ===== -->
+    <article class="product-card" 
+        data-category="rings"
+        data-title="Смарагдова крапля"
+        data-description="Смарагд-груша в обрамленні з дрібних діамантів із вишуканими золотими завитками з боків. Жовте золото."
+        data-price="21 700 ₴"
+        data-category-name="Кільця">  
+<div class="product-image">
+    <img src="images/rings/5.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+</div>       
+<div class="product-info"> 
+    <h2>Смарагдова крапля</h2>
+    <p>Золота каблучка</p>
+    <span class="product-price">21 700 ₴</span>
+</div>
+</article>  
+            
+      <!-- ===== КІЛЬЦЕ 6 ===== -->
+    <article class="product-card" 
+    data-category="rings"
+    data-title="Перехрестя"
+    data-description="Кілька тонких золотих шинок, що перехрещуються, з доріжками дрібних діамантів. Легка та динамічна форма. Жовте золото."
+    data-price="19 300 ₴"
+    data-category-name="Кільця">  
+<div class="product-image">
+    <img src="images/rings/6.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+</div>       
+<div class="product-info">
+    <h2>Перехрестя</h2>
+    <p>Золота каблучка</p>
+<span class="product-price">19 300 ₴</span>
+</div>
+</article>  
+        
+      <!-- ===== КІЛЬЦЕ 7 ===== -->
+    <article class="product-card" 
+        data-category="rings"
+        data-title="Діамантова квітка"
+        data-description="Великий круглий діамант у центрі, оточений колом із круглих діамантів у формі квітки. Гладка золота шинка. Жовте золото."
+        data-price="21 500 ₴"
+        data-category-name="Кільця">  
+<div class="product-image">
+    <img src="images/rings/7.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+</div>       
+<div class="product-info"> 
+    <h2>Діамантова квітка</h2>
+    <p>Золота каблучка</p>
+<span class="product-price">21 500 ₴</span>
+</div>
+</article>  
+        
+    <!-- ===== КІЛЬЦЕ 8 ===== -->
+    <article class="product-card" 
+        data-category="rings"
+        data-title="Рубіновий захід"
+        data-description="Овальний рубін в ореолі з дрібних діамантів. Плечики з діамантовою доріжкою. Жовте золото."
+        data-price="15 800 ₴"
+        data-category-name="Кільця">  
+<div class="product-image">
+    <img src="images/rings/8.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+</div>       
+<div class="product-info">  
+    <h2>Рубіновий захід</h2>
+    <p>Золота каблучка</p>
+<span class="product-price">15 800 ₴</span>
+</div>
+</article>  
+        
+        <!-- ===== КІЛЬЦЕ 9 ===== -->
+    <article class="product-card" 
+        data-category="rings"
+        data-title="Оніксовий чоловічий"
+        data-description="Печатка з прямокутним чорним каменем (схоже на онікс) у масивній золотій оправі. З боків ажурний орнамент. Жовте золото."
+        data-price="14 100 ₴"
+        data-category-name="Кільця">  
+    <div class="product-image">
+        <img src="images/rings/9.png" alt="Золота каблучка">
+    <div class="product-overlay"><span>Переглянути</span> </div>
+    </div>       
+    <div class="product-info">  
+        <h2>Оніксовий чоловічий</h2>
+        <p>Золота каблучка</p>
+    <span class="product-price">14 100 ₴</span>
+    </div>
+    </article>  
+            
+           <!-- ===== КІЛЬЦЕ 10 ===== -->
+    <article class="product-card" 
+    data-category="rings"
+    data-title="Світлий маркіз"
+    data-description="Діамант огранки маркіз у центрі з двома групами дрібних діамантів по боках. Тонка золота шинка. Жовте золото."
+    data-price="17 000 ₴"
+    data-category-name="Кільця">  
+<div class="product-image">
+    <img src="images/rings/10.png" alt="Золота каблучка">
+<div class="product-overlay"><span>Переглянути</span> </div>
+</div>       
+<div class="product-info">  
+    <h2>Світлий маркіз</h2>
+    <p>Золота каблучка</p>
+<span class="product-price">17 000 ₴</span>
+</div>
+</article>  
+
+      <!-- ===== КІЛЬЦЕ 11 ===== -->
+        <article class="product-card" 
+            data-category="rings"
+            data-title="Синя доріжка"
+            data-description="Напівобідок із чергуванням круглих сапфірів і діамантів по всій верхній частині шинки. Жовте золото."
+            data-price="19 400 ₴"
+            data-category-name="Кільця">  
+        <div class="product-image">
+        <img src="images/rings/11.png" alt="Золота каблучка">
+        <div class="product-overlay"><span>Переглянути</span> </div>
+        </div>       
+        <div class="product-info">  
+            <h2>Синя доріжка</h2>
+            <p>Золота каблучка</p>
+        <span class="product-price">19 400 ₴</span>
+        </div>
+        </article>      
+
+        <!-- ===== КІЛЬЦЕ 12 ===== -->
+        <article class="product-card" 
+            data-category="rings"
+            data-title="Шампанське"
+            data-description="Великий овальний камінь теплого відтінку шампань (схоже на діамант фантазійного кольору або морганіт, потрібне уточнення) в ореолі з дрібних діамантів. Плечики прикрашені діамантами. Жовте золото."
+            data-price="22 500 ₴"
+            data-category-name="Кільця">  
+        <div class="product-image">
+        <img src="images/rings/12.png" alt="Золота каблучка">
+        <div class="product-overlay"><span>Переглянути</span> </div>
+        </div>       
+        <div class="product-info">  
+            <h2>Шампанське</h2>
+            <p>Золота каблучка</p>
+        <span class="product-price">22 500 ₴</span>
+        </div>
+        </article>  
+
+
+             <!-- ===== СЕРЕЖКИ ===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Морозний цвіт"
+                 data-description="По вісім діамантів-маркізів у формі квітки, в центрі круглий діамант, зверху пусета-маркіз, жовте золото."
+                 data-price="15 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/1.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Морозний цвіт</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  15 000 ₴</span>       
+        </div>    
+        </article> 
+
+        <!-- ===== СЕРЕЖКИ 2===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Сапфірова сльоза"
+                 data-description="Сапфіри-груші в ореолі з діамантів, зверху квадратний елемент із чотирьох діамантів, жовте золото."
+                 data-price="14 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/2.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Сапфірова сльоза</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  14 000 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 3===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Листя світла"
+                 data-description="Каскад із діамантів-маркізів у вигляді гілочки, зверху пусета з круглим діамантом, жовте золото."
+                 data-price="12 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/3.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Листя світла</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  12 000 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 4===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Смарагдовий ліс"
+                 data-description="Смарагди огранки ізумруд в ореолі з круглих діамантів, зверху овальна пусета з діамантів, жовте золото."
+                 data-price="15 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/4.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Смарагдовий ліс</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  15 000 ₴</span>       
+        </div>    
+        </article> 
+
+        <!-- ===== СЕРЕЖКИ 5===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Краплина світанку"
+                 data-description="Діаманти-груші в подвійному ореолі з дрібних діамантів, зверху діамантова доріжка, жовте золото."
+                 data-price="17 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/5.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Краплина світанку</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  17 000 ₴</span>       
+        </div>    
+        </article> 
+
+        <!-- ===== СЕРЕЖКИ 6===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Рубінові серця"
+                 data-description="Рубіни-серця в ореолі з діамантів, зверху великий овальний діамант, жовте золото."
+                 data-price="11 500 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/6.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Рубінові серця</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  11 500 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 7===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Три миті"
+                 data-description="Три круглі діаманти, підвішені один під одним, зверху витягнута діамантова пусета, жовте золото."
+                 data-price="16 500 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/7.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Три миті</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  16 500 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 8===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Золоте коло"
+                 data-description="Золоті сережки-кільця з доріжкою з круглих діамантів по всій довжині."
+                 data-price="15 500 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/8.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Золоте коло</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  15 500 ₴</span>       
+        </div>    
+        </article> 
+
+        <!-- ===== СЕРЕЖКИ 9===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Пір'їнка"
+                 data-description="Подовжений каскад із діамантів-маркізів і круглого діаманта, зверху діамант-маркіз, жовте золото."
+                 data-price="18 500 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/9.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Пір'їнка</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  18 500 ₴</span>       
+        </div>    
+        </article>  
+
+        <!-- ===== СЕРЕЖКИ 10===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Сапфірова корона"
+                 data-description="Круглі сапфіри в ореолі з діамантів, вище два невеликі камені (діамант і сапфір), жовте золото."
+                 data-price="16 200 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/10.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Сапфірова корона</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  16 200 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 11===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Грані арт-деко"
+                 data-description="Квадратний діамант у ромбоподібній оправі з діамантовою окантовкою, зверху доріжка з діамантів, жовте золото."
+                 data-price="18 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/11.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Грані арт-деко</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  18 000 ₴</span>       
+        </div>    
+        </article>
+
+        <!-- ===== СЕРЕЖКИ 12===== -->
+        <article class="product-card" 
+                 data-category="earrings"
+                 data-title="Смарагдова крапля"
+                 data-description="Смарагди-груші в ореолі з діамантів, зверху діамант-маркіз і невеликий діамантовий акцент, жовте золото."
+                 data-price="20 000 ₴"
+                 data-category-name="Сережки">  
+        <div class="product-image">    
+                   <img src="images/earrings/12.png"alt="Золоті сережки">
+        <div class="product-overlay"> <span>Переглянути</span> </div>  
+         </div>                
+        <div class="product-info">
+                <h2>Смарагдова крапля</h2>
+                <p>Золоті сережки</p>
+                <span class="product-price">  20 000 ₴</span>       
+        </div>    
+        </article>        
+        
+              
+                                   
+        <!-- ===== ПІДВІСКА ===== -->
+        <article class="product-card" 
+            data-category="pendants"
+            data-title="Сапфірова сльоза"
+            data-description="Cапфір-груша в ореолі з круглих діамантів, бейл-квітка з діамантів, жовте золото, ланцюжок."
+            data-price="12 500 ₴"
+            data-category-name="Підвіска">  
+       <div class="product-image"><img src="images/pendants/1.png"alt="Золота підвіска">
+       <div class="product-overlay"><span>Переглянути</span> </div>
+        </div>        
+        <div class="product-info">   
+                <h2>Сапфірова сльоза</h2> 
+                <p>Золота підвіска</p>    
+                <span class="product-price">  12 500 ₴</span>
+        </div>      
+        </article>        
+                
+        <!-- ===== ПІДВІСКА 2 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Морозний цвіт"
+        data-description=" Вісім діамантів огранки маркіз у формі сніжинки, центральний круглий діамант, бейл із діаманта-груші, жовте золото. "
+        data-price="17 300 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/2.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Морозний цвіт</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 17 300 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 3 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Смарагдовий ліс"
+        data-description="Смарагд огранки ізумруд в ореолі з круглих діамантів, бейл із доріжкою з діамантів, жовте золото.    "
+        data-price="16 100 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/3.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Смарагдовий ліс</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 16 100 ₴</span>
+    </div>   
+    </article>
+    
+    <!-- ===== ПІДВІСКА 4 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Хвиля світла"
+        data-description="S-подібна ажурна хвиля з розсипом дрібних діамантів, унизу великий круглий діамант, жовте золото."
+        data-price="18 200 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/4.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Хвиля світла</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 18 200 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 5 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Рубінове серце"
+        data-description="Рубін у формі серця в ореолі з діамантів, бейл із діамантами, жовте золото."
+        data-price="15 200 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/5.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Рубінове серце</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 15 200 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 6 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Краплина світанку"
+        data-description="Діамант-груша в подвійному ореолі з дрібних діамантів, бейл із діамантами, жовте золото."
+        data-price="21 000 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/6.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Краплина світанку</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 21 000 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 7 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Сапфірова квітка"
+        data-description="Чотири сапфіри-маркізи, центральний круглий діамант, між пелюстками дрібні діаманти, жовте золото."
+        data-price="25 000 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/7.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Сапфірова квітка</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 25 000 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 8 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Тріо"
+        data-description="Три круглі діаманти у вертикальній лінії, бейл із діамантами, жовте золото."
+        data-price="19 000 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/8.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Тріо</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 19 000 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 9 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Арт-деко"
+        data-description="Овальний діамант у геометричній ажурній оправі з дрібними діамантами, жовте золото."
+        data-price="21 500 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/9.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Арт-деко</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 21 500 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 10 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Гранатовий ореол"
+        data-description="Круглий червоний камінь (рубін) в ореолі з діамантів, бейл із діамантами, жовте золото."
+        data-price="18 500 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/10.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Гранатовий ореол</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 18 500 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 11 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Око богині"
+        data-description="Діамант-маркіз у подвійному контурі з дрібних діамантів, жовте золото."
+        data-price="23 500 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/11.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Око богині</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 23 500 ₴</span>
+    </div>   
+    </article>
+
+    <!-- ===== ПІДВІСКА 12 ===== -->
+    <article class="product-card" 
+        data-category="pendants"
+        data-title="Світловий хрест"
+        data-description="Чотири діаманти-маркізи у формі хреста, в центрі дрібний круглий діамант, бейл із діаманта-груші, жовте золото."
+        data-price="25 000 ₴"
+        data-category-name="Підвіска">  
+    <div class="product-image">
+        <img src="images/pendants/12.png"alt="Золота підвіска">
+    <div class="product-overlay"><span>Переглянути</span></div>  
+    </div>
+    <div class="product-info">
+        <h2>Світловий хрест</h2>
+        <p>Золота підвіска</p>
+        <span class="product-price"> 25 000 ₴</span>
+    </div>   
+    </article>
+
+     
+     <!-- ===== БРАСЛЕТ ===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Сапфірова ріка"
+        data-description="Золотий браслет із круглими синіми сапфірами в литих оправах. Між ними чергуються ромбоподібні діаманти. Жовте золото, надійний замок."
+        data-price="16 000 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+        <img class="bracelets" src="images/bracelets/1.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+       <h2>Сапфірова ріка</h2>
+       <p>Золотий браслет</p>
+        <span class="product-price"> 16 000 ₴</span>  
+    </div>       
+    </article>
+
+    <!-- ===== БРАСЛЕТ 2===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Діамантова доріжка"
+        data-description="Класичний тенісний браслет: суцільна лінія круглих діамантів у золотих кастах-лапках, на золотому ланцюжку для регулювання довжини. Жовте золото."
+        data-price="18 000 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+        <img class="bracelets" src="images/bracelets/2.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+       <h2>Діамантова доріжка</h2>
+       <p>Золотий браслет</p>
+        <span class="product-price"> 18 000 ₴</span>  
+    </div>       
+    </article> 
+
+    <!-- ===== БРАСЛЕТ 3===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Смарагдовий сад"
+        data-description="Круглі смарагди в золотих оправах чергуються з невеликими діамантами. Звʼязані між собою золотими ланками. Жовте золото."
+        data-price="21 000 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+        <img class="bracelets" src="images/bracelets/3.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+       <h2>Смарагдовий сад</h2>
+       <p>Золотий браслет</p>
+        <span class="product-price"> 21 000 ₴</span>  
+    </div>       
+    </article> 
+
+    <!-- ===== БРАСЛЕТ 4===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Нескінченність"
+        data-description="Центральний елемент у вигляді переплетеної вісімки, оздоблений дрібними діамантами. З боків гладкі золоті дужки та ланцюжок для регулювання довжини. Жовте золото."
+        data-price="19 100 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+        <img class="bracelets" src="images/bracelets/4.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+       <h2>Нескінченність</h2>
+       <p>Золотий браслет</p>
+        <span class="product-price"> 19 100 ₴</span>  
+    </div>       
+    </article> 
+
+        <!-- ===== БРАСЛЕТ 5===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Рубіновий вечір"
+        data-description="Центральний великий рубін подушкоподібної огранки в золотій оправі й чотири менші рубіни по боках, з'єднані золотими ланками. Жовте золото."
+        data-price="20 100 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+        <img class="bracelets" src="images/bracelets/5.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+        <h2>Рубіновий вечір</h2>
+        <p>Золотий браслет</p>
+        <span class="product-price"> 20 100 ₴</span>  
+    </div>       
+    </article>  
+
+    <!-- ===== БРАСЛЕТ 6===== -->
+    <article class="product-card" 
+        data-category="bracelets"
+        data-title="Діамантова конюшина"
+        data-description="Центральна квітка з чотирьох діамантів і чотири окремі діамантові каст-лапки по боках, поєднані тонким золотим ланцюжком. Жовте золото."
+        data-price="22 500 ₴"
+        data-category-name="Браслети">  
+    <div class="product-image">
+    <img class="bracelets" src="images/bracelets/6.png" alt="Золотий браслет">
+    <div class="product-overlay"> <span>Переглянути</span> </div> 
+    </div>    
+    <div class="product-info">
+        <h2>Діамантова конюшина</h2>
+        <p>Золотий браслет</p>
+    <span class="product-price"> 22 500 ₴</span>  
+    </div>       
+    </article>  
+
+    </section>
+  </main>   
+
+  
+      
+ 
+        <!-- =========================================
+            BOOTSTRAP MODAL — RMR PRODUCT LIGHTBOX
+        ========================================= -->
+
+    <div class="modal fade rmr-modal" id="productModal" tabindex="-1" aria-labelledby="modalProductTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+
+     <!-- Кнопка закрытия -->
+            <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Закрити"> <i class="fas fa-times"></i></button>
+         <div class="row g-0">       
+    <!-- Изображение -->
+          <div class="col-lg-7 modal-product-image"><img id="modalProductImage" src="" alt=""> </div>
+
+     <!-- Информация -->
+        <div class="col-lg-5 modal-product-info">           
+           <span id="modalProductCategory" class="modal-category"> Кільця</span>
+           <h2 id="modalProductTitle"> RMR 001</h2>  
+        <div class="modal-gold-line"></div>             
+            <p id="modalProductDescription">Авторська прикраса ручної роботи. </p>  
+        <div id="modalProductPrice" class="modal-price">  12 500 ₴  </div>    
+            <button type="button" class="modal-order-btn" id="modalOrderButton"> Замовити прикрасу</button>
+         </div>   
+      </div>
+      </div>
+      </div>
+      </div> 
+
+
+
+      <!-- =========================================
+            RMR: ФОРМА ЗАМОВЛЕННЯ ПРИКРАСИ
+        ========================================= -->
+    
+    <div class="modal fade rmr-order-modal" id="rmrOrderModal" tabindex="-1" aria-labelledby="rmrOrderTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="rmrOrderTitle">Замовлення прикраси</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+                </div>
+                <div class="modal-body p-3 p-md-4">
+                    <div class="rmr-order-product">
+                        <small>Обрана прикраса</small>
+                        <strong id="rmrOrderProductName">Прикраса з каталогу RMR</strong>
+                    </div>
+                    <form id="rmrOrderForm" class="rmr-order-form" data-rmr-form data-rmr-form-type="order" novalidate>
+                        <input type="hidden" id="rmrOrderProduct" name="product" value="Прикраса з каталогу RMR">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label" for="orderName">Ваше ім’я *</label>
+                                <input class="form-control" id="orderName" name="name" type="text" autocomplete="name" required data-required-message="Введіть ваше ім’я." placeholder="Ваше ім’я">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="orderPhone">Номер телефону *</label>
+                                <input class="form-control" id="orderPhone" name="phone" type="tel" autocomplete="tel" required data-required-message="Введіть номер телефону." placeholder="+380 …">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="orderEmail">Електронна пошта *</label>
+                                <input class="form-control" id="orderEmail" name="email" type="email" autocomplete="email" required data-required-message="Введіть електронну пошту." placeholder="name@example.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="orderDetails">Побажання до замовлення</label>
+                                <textarea class="form-control" id="orderDetails" name="details" placeholder="Розмір, матеріал, камінь або інші побажання (необов’язково)"></textarea>
+                            </div>
+                            <div class="col-12 d-flex flex-column flex-sm-row gap-3 mt-3">
+                                <button type="submit" class="rmr-order-submit">Підтвердити замовлення <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></button>
+                                <button type="button" class="rmr-order-cancel" data-bs-dismiss="modal">Повернутися до каталогу</button>
+                            </div>
+                        </div>
+                        <p class="rmr-demo-note">* Обов’язкові поля.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Спільне демонстраційне повідомлення після успішної перевірки -->
+    <div class="modal fade rmr-success-modal" id="rmrSuccessModal" tabindex="-1" aria-labelledby="rmrSuccessTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-3 p-md-4">
+                <div class="modal-header border-0 justify-content-end pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="rmr-success-mark" aria-hidden="true"><i class="fa-solid fa-check"></i></div>
+                    <h2 class="modal-title fs-3 mb-3" id="rmrSuccessTitle">Форму замовлення відправлено!</h2>
+                   
+                    <button type="button" class="success-close" data-bs-dismiss="modal">Зрозуміло</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+     <!-- FOOTER -->
+    <footer class="footer"> 
+        <div class="container">
+    
+       <!-- ОСНОВНАЯ ЧАСТЬ FOOTER -->
+        <div class="row footer-main g-4">
+        
+       <!-- ЛОГОТИП -->
+        <div class="col-lg-3 col-md-6 col-12">
+        <div class="footer-column footer-brand"> <a href="index.html" class="footer-logo d-inline-block"> <img src="images/logotipWithDiamond.png"alt="Ювелірна майстерня" class="img-fluid"> </a>        
+         <p class="footer-description"> Ювелірна майстерня </p>
+         </div>
+         </div>                         
+        
+        <!--  НАВИГАЦИЯ-->
+         <div class="col-lg-3 col-md-6 col-12">            
+         <div class="footer-column">            
+         <h5> Навігація </h5>
+            <ul class="footer-links list-unstyled">                    
+                <li> <a href="index.html"> Головна </a> </li>
+                <li> <a href="catalog.html"> Каталог </a> </li>
+                <li> <a href="packaging.html"> Футляри </a> </li> 
+           </ul>                
+                     
+          </div>                          
+          </div>                            
+        
+         <!--  ИНФОРМАЦИЯ   -->          
+           <div class="col-lg-2 col-md-6 col-12">          
+           <div class="footer-column">
+           <h5>  Інформація  </h5>  
+                <ul class="footer-links list-unstyled">
+                   <li> <a href="contacts.html"> Контакти </a> </li>
+                   <li> <a href="#"> Доставка і оплата </a> </li>         
+                 <li> <a href="#"> Гарантія </a> </li>   
+                </ul>            
+           </div>
+           </div>              
+    
+         <!-- КОНТАКТЫ -->   
+            <div class="col-lg-3 col-md-6 col-12">         
+            <div class="footer-column">         
+            <h5> Зв'яжіться з нами </h5>
+
+            
+         
+         <!-- ТЕЛЕФОН -->                    
+            <p class="footer-contact">  +38 (000) 000-00-00  </p>
+                          
+         <!-- EMAIL -->
+            <p class="footer-contact"> 
+            <a href="mailto:info@rmr.net?subject=Замовлення прикрас">info@rmr.net</a> </p>    
+                                
+         <!-- СОЦСЕТИ -->
+            <div class="footer-socicons d-flex">
+                <span aria-label="Instagram"> <i class="fa-brands fa-instagram"></i> </span>
+                <span aria-label="Facebook"> <i class="fa-brands fa-square-facebook"></i> </span>
+                <span aria-label="Pinterest"> <i class="fa-brands fa-square-pinterest"></i> </span>
+                <span aria-label="Twitter"> <i class="fa-brands fa-square-twitter"></i> </span>  
+            </div>
+           
+        </div>
+        </div>
+  <!-- КНОПКА ВВЕРХ -->
+  <div class="col-lg-1 col-md-6 col-12 footer-up-column">
+    <a href="#" class="up-button" aria-label="Повернутися нагору">
+        <i class="fa-solid fa-square-caret-up"></i>
+    </a>
+</div>  
+        </div>
+        
+<!-- НИЖНЯЯ ЧАСТЬ FOOTER  -->
+<div class="footer-bottom row align-items-center">       
+           
+    <!-- КОПИРАЙТ -->
+    <div class="col-md-6 col-12">
+    <div class="footer-copy"> &copy;
+      <span class="year"></span>
+     <span> RMR. Ювелірна майстерня. Всі права захищені.</span>
+                       
+     </div>
+     </div>               
+                    
+    <!-- ТЕКСТ СПРАВА -->
+    <div class="col-md-6 col-12 text-md-end">
+    <div class="footer-love"> Створено з любов'ю до ювелірного мистецтва. </div>
+    </div>  
+    </div>
+    </div>            
+                  
+</footer>
+
+      
+                      
+    
+    
+        
+    <script src="libs/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/catalog.js"></script>
+    <script src="scripts/forms.js"></script>
+    <script src="scripts/diamond.js"></script>
+    <script src="scripts/script.js"></script>        
+    </body>
+    </html>
+              
+   
+           
+       
+
+        
+
+   
+
+                
+
+                            
+                    
+
+            
+   
+
+            
+                
+
+                
+
+                    
+
+                    
+
+                    
+
+                    
+     
+
+    
+
+    
+
+        
+
+       
+
+    
+
+       
+
+        
+
+   
+          
+
+           
+
+               
+
+                
+
+                
+
+            
+
+        
+
+
+       
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+                
+                   
+
+                
+
+               
+
+                    
+
+                   
+
+                
+
+                
+                    
+
+                
+
+            
+       
+
+           
+            
+
+           
+                
+            
+
+      
+
+
+        
+
+    
+
+    
+
+
+
+
+
+       
+
+
+            
+
+            
+
+
+            
+
+          
+                    
+
+
+
+
+
+
+
+   
+                                  
+                       
+                    
+                        
+                        
+
+                       
+                    
+                  
+                   
+                        
+                       
+
+                        
+                         
+                            
+                                
+                       
+                    
+                                     
+        
+                            
+                        
+    
+                
+                   
+
+                   
+                      
+                       
+                    
+
+            
+
+                        
+
+           
+
+
+
+
+
+
+
+
+
+  
+                        
+                              
+           
+
+                
+
+           
+
+
+        
+
+
+
+                       
+               
+               
+
+                
+
+                
+                
+
+                
+
+                   
+
+                    
+
+               
+           
+
+      
+
+
+      
+                    
+
+                    
+                        
+                            
+                        
+                    
+
+                   
+                        
+                            
+                        
+                    
+
+                   
+                        
+                           
+                        
+                    
+
+                
+
+           
+           
+                        
