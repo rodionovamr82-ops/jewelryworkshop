@@ -801,7 +801,7 @@ body {
         min-height: 65px;
     }
     .site-header .nav-link {
-        font-size: 11px;
+        font-size: 13.5px;
     }
     .site-header .navbar-nav {
         gap: 8px !important;
@@ -861,7 +861,8 @@ body {
 /* VERY SMALL SCREENS */
 @media (max-width: 480px) {
     .site-header .nav-link {
-        font-size: 9px;
+        font-size: clamp(12px, 3.4vw, 13.5px);
+       
     }
     .site-header .navbar-nav {
         gap: 5px !important;
@@ -1085,7 +1086,7 @@ body {
         letter-spacing: 1px;
     }
     .product-info p {
-        font-size: 12px;
+        font-size: 14px;
     }
     .product-price {
         font-size: 14px;
@@ -1503,7 +1504,7 @@ body.packaging-page > footer.footer {
     }
 
     body.packaging-page .arc-description {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.65;
     }
 
@@ -1541,7 +1542,7 @@ body.packaging-page > footer.footer {
     }
 
     body.packaging-page .arc-description {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -1589,7 +1590,7 @@ body.packaging-page > footer.footer {
 }
 
 body.contacts-page a {
-    color: inherit;
+    /*color: inherit;*/
     text-decoration: none;
 }
 
@@ -1973,7 +1974,7 @@ body.contacts-page .contact-map-card { animation-delay: .05s; }
     }
 
     body.contacts-page .hero-description {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     body.contacts-page .contact-details > div {
@@ -2006,7 +2007,7 @@ body.contacts-page .contact-map-card { animation-delay: .05s; }
     }
 
     body.contacts-page .form-intro {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 20px;
     }
 
@@ -2020,7 +2021,7 @@ body.contacts-page .contact-map-card { animation-delay: .05s; }
 
     body.contacts-page .footer-brand small {
         white-space: normal;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -2185,273 +2186,370 @@ body.contacts-page .contact-map-card { animation-delay: .05s; }
    }
    
    
-/* =========================================================
-   RMR — ЕДИНАЯ АДАПТАЦИЯ ТИПОГРАФИКИ
-   Телефоны • планшеты • ноутбуки • большие экраны
-   Добавлено поверх существующих стилей, без изменения
-   HTML-разметки и Bootstrap-сетки.
-   ========================================================= */
 
-/* Базовая защита от горизонтального переполнения.
-   Обычный текст может переноситься по словам; запрещаем
-   переносы только там, где они мешают интерфейсу. */
-   html {
+
+/* =====================================================
+   АДАПТАЦИЯ ТИПОГРАФИКИ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ
+
+   Принципы:
+   1) на экранах от 1200px ничего не меняется: все правила ниже работают только на меньших экранах;
+   2) основной текст не меньше 16px, второстепенный не меньше 14px, мелкие подписи не меньше 12px;
+   3) большие заголовки плавно уменьшаются вместе с шириной экрана (clamp), поэтому слова не обрезаются;
+   4) заголовки переносятся ровно (text-wrap: balance), слова не рвутся посередине;
+   5) поля ввода 16px: так iPhone не приближает страницу при вводе.
+   ===================================================== */
+
+/* Мобильные браузеры не должны сами увеличивать шрифт */
+html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
-body {
-    overflow-wrap: break-word;
-    word-break: normal;
-}
-
-p,
-li,
-label,
-.form-text,
-.contact-note,
-.contact-main,
-.arc-description,
-.arc-subtitle {
-    word-break: normal;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-/* Навигация и короткие подписи не разрываются посреди слова. */
-.site-header .nav-link,
-.site-header .navbar-brand,
-.rmr-button,
-button,
-.btn {
-    word-break: normal;
-    hyphens: none;
-}
-
-/* Удобные размеры текста по умолчанию. */
-body {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    overflow-wrap: normal;
-    word-break: normal;
-    flex-wrap: balance;
-  
-}
-
-p {
-    line-height: 1.65;
-}
-
-/* Планшеты и небольшие ноутбуки */
-@media (min-width: 576px) and (max-width: 991.98px) {
-    body {
-        font-size: 16px;
+/* Ровные переносы строк в заголовках, длинные слова не вылезают за край (только до 1199px) */
+@media (max-width: 1199.98px) {
+    h1,
+    h2,
+    h3,
+    .about-title,
+    .modal-title {
+        text-wrap: balance;
+        overflow-wrap: break-word;
     }
-
-    h1 {
-        font-size: clamp(32px, 4.5vw, 46px);
-    }
-
-    h2 {
-        font-size: clamp(26px, 3.5vw, 36px);
-    }
-
-    h3 {
-        font-size: clamp(21px, 2.7vw, 28px);
-    }
-
     p,
-    li,
-    label {
-        font-size: 15px;
-        line-height: 1.65;
+    li {
+        overflow-wrap: break-word;
     }
+}
 
+/* Планшеты и телефоны: невидимая зона вокруг ссылок меню, чтобы в них было удобно попадать пальцем */
+@media (max-width: 991.98px) {
     .site-header .nav-link {
-        font-size: 14px;
-        line-height: 1.3;
+        position: relative;
+        
+    }
+    .site-header .nav-link::after {
+        content: "";
+        position: absolute;
+        inset: -14px -6px;
     }
 }
 
-/* Телефоны */
-@media (max-width: 575.98px) {
-    body {
-        font-size: 15px;
-        line-height: 1.6;
+/* ---------- до 1199px: главный заголовок на слайдах плавно уменьшается ----------
+   320px → 30px, 1200px → 48px (раньше минимум был 48px, и на телефоне слова обрезались) */
+@media (max-width: 1199.98px) {
+    .about-title {
+        font-size: clamp(1.875rem, 1.466rem + 2.045vw, 3rem);
     }
+}
 
-    h1 {
-        font-size: clamp(28px, 8vw, 36px);
-        line-height: 1.12;
+/* ---------- до 991px: подвал читаемым шрифтом ---------- */
+@media (max-width: 991.98px) {
+    .footer-description,
+    .footer h5,
+    .footer-bottom span,
+    .footer-copy,
+    .footer-love {
+        font-size: 13px;
     }
-
-    h2 {
-        font-size: clamp(23px, 6vw, 29px);
-        line-height: 1.2;
+    .footer-links a,
+    .footer-contact {
+        font-size: 14px;
     }
+}
 
-    h3 {
-        font-size: clamp(19px, 5vw, 23px);
-        line-height: 1.25;
+/* ---------- до 767px: телефоны ---------- */
+@media (max-width: 767.98px) {
+
+    /* Главная: тексты на слайдах. Отступ слева 55px на телефоне забирал пол экрана */
+    .about-label,
+    .about-title,
+    .about-text {
+        margin-left: clamp(4px, 2vw, 14px);
     }
-
-    h4 {
-        font-size: 18px;
-        line-height: 1.3;
+    .about-label {
+        font-size: 13px;
+        letter-spacing: 3px;
     }
-
-    p,
-    li,
-    label {
-        font-size: 15px;
-        line-height: 1.65;
-    }
-
-    /* Поля остаются читаемыми и удобными для касания. */
-    input,
-    select,
-    textarea,
-    .form-control,
-    .form-select {
+    .about-text {
         font-size: 16px;
-        max-width: 100%;
-    }
-
-    /* Не даём текстовым блокам и сетке создавать прокрутку вбок. */
-    .container,
-    .container-fluid,
-    .row,
-    [class*="col-"] {
-        min-width: 0;
-    }
-
-    img,
-    video,
-    iframe {
-        max-width: 100%;
-    }
-
-    /* Главный экран: текст по левому краю и адаптивные размеры. */
-    .hero .about-content {
-        text-align: left;
-        max-width: 100%;
-        padding-left: clamp(18px, 5vw, 24px);
-        padding-right: clamp(18px, 5vw, 24px);
-    }
-
-    .hero .about-content h1,
-    .hero .about-content h2,
-    .hero .about-content h3,
-    .hero .about-content p {
-        text-align: left;
-    }
-
-    .hero .about-content h1 {
-        font-size: clamp(29px, 8.5vw, 36px);
-        line-height: 1.12;
-        margin-bottom: 18px;
-    }
-
-    .hero .about-content p,
-    .hero .about-content .about-text {
-        font-size: 15px;
-        line-height: 1.65;
-    }
-
-    /* Контакты: не оставляем заголовок чрезмерно крупным. */
-    body.contacts-page .contacts-hero h1 {
-        font-size: clamp(30px, 8vw, 38px);
-        line-height: 1.15;
-    }
-
-    body.contacts-page .hero-description,
-    body.contacts-page .contact-main,
-    body.contacts-page .map-card-content p,
-    body.contacts-page .form-intro {
-        font-size: 15px;
         line-height: 1.6;
+        letter-spacing: 0.2px;
+    }
+    .about-scroll {
+        font-size: 11px;
+    }
+    .rmr-showcase-kicker {
+        font-size: 12px;
     }
 
-    body.contacts-page .contact-note {
+    /* Каталог: вкладки окна товара */
+    .modal-category {
+        font-size: 13px;
+    }
+    .modal-order-btn {
+        font-size: 14px;
+    }
+
+    /* Форма заказа в окне */
+    .rmr-order-modal .form-label {
+        font-size: 14px;
+    }
+    .rmr-order-modal .form-control,
+    .rmr-order-modal textarea.form-control {
+        font-size: 16px;
+    }
+    .rmr-order-modal .rmr-order-product small {
+        font-size: 12px;
+    }
+    .rmr-order-modal .rmr-demo-note,
+    body.contacts-page .contacts-form .rmr-field-error,
+    .rmr-order-form .rmr-field-error {
         font-size: 13px;
     }
 
-    body.contacts-page .map-card-content h2,
-    body.contacts-page .contact-form-content h2 {
-        font-size: clamp(23px, 6vw, 28px);
-        line-height: 1.2;
+    /* Контакты */
+    body.contacts-page .contact-main {
+        font-size: 15px;
     }
-
+    body.contacts-page .contact-note {
+        font-size: 13px;
+    }
+    body.contacts-page .rmr-button {
+        font-size: 15px;
+    }
     body.contacts-page .contacts-form input,
     body.contacts-page .contacts-form select,
     body.contacts-page .contacts-form textarea {
         font-size: 16px;
     }
-
-    /* Страница подарочной упаковки */
-    body.packaging-page .arc-info h1 {
-        font-size: clamp(29px, 8vw, 36px);
-        line-height: 1.15;
-        flex-wrap: balance;
-    }
-
-    body.packaging-page .arc-subtitle {
-        font-size: 16px;
-        line-height: 1.55;
-    }
-
-    body.packaging-page .arc-description {
+    body.contacts-page .form-status {
         font-size: 14px;
-        line-height: 1.65;
     }
 
-    /* Каталог: читаемые подписи, кнопки и модальное окно. */
-    body .modal-product-info h2 {
-        font-size: clamp(23px, 6vw, 28px);
+    /* Подвал: строки копирайта переносятся ровно, без одинокого слова на второй строке */
+    .footer-copy,
+    .footer-love {
+        text-wrap: balance;
+    }
+}
+
+/* ---------- телефон лёжа и очень низкие окна: слайду не хватает высоты ---------- */
+@media (max-height: 520px) and (max-width: 991.98px) {
+    .about-label {
+        margin-bottom: 8px;
+    }
+    .about-title {
+        margin-bottom: 10px;
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
+    }
+    .about-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .about-scroll {
+        display: none;
+    }
+}
+
+/* ---------- большие мониторы от 1800px: текст на главном слайде растёт вместе с экраном ----------
+   (на 1800px значения совпадают с прежними, дальше плавно увеличиваются) */
+@media (min-width: 1800px) {
+    .about-label {
+        font-size: clamp(14px, 0.8vw, 18px);
+    }
+    .about-title {
+        max-width: 900px;
+        font-size: clamp(4.5rem, 3.6vw, 6.25rem);
+    }
+    .about-text {
+        max-width: 760px;
+        font-size: clamp(15px, 0.85vw, 20px);
+    }
+}
+
+
+/* =====================================================
+   МОБИЛЬНАЯ ШАПКА: меню двумя колонками по бокам от логотипа
+   слева: Головна / Каталог (прижато влево)
+   справа: Футляри / Контакти (прижато вправо)
+   ===================================================== */
+@media (max-width: 767.98px) {
+    .site-header .row {
+        min-height: 65px;               /* высота полосы шапки */
+    }
+    .site-header .navbar-nav {
+        flex-direction: column !important;   /* пункты друг под другом */
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px !important;
+    }
+    .site-header .row > div:last-child .navbar-nav {
+        align-items: flex-end;               /* правая колонка у правого края */
+        text-align: right;
+    }
+    .site-header .nav-link {
+        transform: none;                     /* раньше сдвигало ссылки вниз на 25px */
         line-height: 1.2;
     }
+}
 
-    .rmr-order-modal .form-control,
-    .rmr-order-modal textarea.form-control {
+/* =====================================================
+   КАРТОЧКИ КАТАЛОГА: название, подпись и цена на одном уровне
+   ===================================================== */
+@media (max-width: 767.98px) {
+    .products-grid {
+        align-items: stretch;
+    }
+    .product-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;                              /* инфо-блок тянется до низа карточки */
+    }
+    .product-info h2 {
+        min-height: 2.6em;                    /* место под 2 строки названия */
+        line-height: 1.3;
+    }
+    .product-info .product-price {
+        margin-top: auto;                     /* цена прижата к низу карточки */
+    }
+}
+
+
+/* =====================================================
+   КАРТОЧКИ КАТАЛОГА: ровные названия на ВСЕХ экранах
+   (раньше выравнивание работало только до 768px, а на планшетах
+   в 3 колонки название в 1 и 2 строки сдвигало подпись и цену)
+   ===================================================== */
+.products-grid {
+    align-items: stretch;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.product-info .product-price {
+    margin-top: auto;               /* цена всегда у нижнего края карточки */
+}
+@media (max-width: 1199.98px) {
+    .product-info h2 {
+        min-height: 2.6em;          /* место под 2 строки: подписи и цены стоят на одной линии */
+        line-height: 1.3;
+        letter-spacing: 1px;
+        text-wrap: wrap;            /* без «балансировки», она рвала строки по-разному */
+    }
+    .product-info p {
+        min-height: 1.4em;
+        line-height: 1.4;
+    }
+}
+
+
+/* =====================================================
+   КНОПКА «ВВЕРХ» В ФУТЕРЕ: на планшетах под соцсетями
+   ===================================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer-up-column {
+        margin-left: 50%;                               /* вторая колонка, прямо под блоком «Зв'яжіться з нами» */
+        margin-top: 0;
+        padding-left: calc(var(--bs-gutter-x) * 0.5);   /* тот же отступ, что у текста колонки */
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer-up-column {
+        margin-top: 0;
+        justify-content: center;                        /* на телефоне по центру, под соцсетями */
+    }
+}
+
+
+/* =====================================================
+   ШРИФТЫ НА ПЛАНШЕТАХ, iPad И МАЛЕНЬКИХ ЭКРАНАХ: крупнее
+   ===================================================== */
+@media (max-width: 991.98px) {
+    /* шапка */
+    .site-header .nav-link {
         font-size: 16px;
     }
 
-    .rmr-order-modal .rmr-demo-note {
-        font-size: 13px;
-        line-height: 1.55;
+    /* фильтр каталога */
+    .filter-btn {
+        font-size: 17px;
+    }
+
+    /* карточки */
+    .product-info h2 {
+        font-size: 19px;
+    }
+    .product-info p {
+        font-size: 16px;
+    }
+    .product-price {
+        font-size: 17px;
+    }
+
+    /* футер */
+    .footer-description,
+    .footer h5 {
+        font-size: 14px;
+    }
+    .footer-links a,
+    .footer-contact {
+        font-size: 16px;
+    }
+    .footer-links li,
+    .footer-contact {
+        margin-bottom: 4px;
+    }
+    .footer-socicons {
+        gap: 18px;
+    }
+    .footer-socicons span {
+        font-size: 28px;
+    }
+    .up-button {
+        font-size: 36px;
+    }
+    .footer-bottom span,
+    .footer-copy,
+    .footer-love {
+        font-size: 14px;
     }
 }
 
-/* Очень узкие телефоны: сохраняем читаемость, не уменьшаем всё подряд. */
-@media (max-width: 380px) {
-    body {
+@media (max-width: 767.98px) {
+    .site-header .nav-link {
         font-size: 15px;
     }
-
-    .hero .about-content h1,
-    body.packaging-page .arc-info h1 {
-        font-size: 29px;
-        
-    }
-
-    .hero .about-content p,
-    .hero .about-content .about-text,
-    body.contacts-page .hero-description {
-        font-size: 15px;
+    .filter-btn {
+        font-size: 16px;
     }
 }
 
-/* Крупные экраны: ограничиваем чрезмерную ширину строк,
-   чтобы длинные абзацы было комфортно читать. */
-@media (min-width: 1200px) {
-    .hero .about-content p,
-    .hero .about-content .about-text,
-    body.contacts-page .hero-description,
-    body.packaging-page .arc-description {
-        max-width: 58ch;
+@media (max-width: 575.98px) {
+    .product-info h2 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    .product-info p {
+        font-size: 14.5px;
+    }
+    .product-price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header .nav-link {
+        font-size: 14px;                /* было 12–13.5px */
     }
 }
