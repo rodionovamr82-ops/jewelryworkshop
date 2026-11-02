@@ -2457,11 +2457,19 @@ html {
    КНОПКА «ВВЕРХ» В ФУТЕРЕ: на планшетах под соцсетями
    ===================================================== */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    /* iPad mini / iPad Air / Surface Pro 7: кнопка в правом нижнем углу футера,
+       прямо над линией перед копирайтом */
+    .footer-main {
+        position: relative;
+        padding-bottom: 8px;
+    }
     .footer-up-column {
-        margin-left: 50%;                               /* вторая колонка, прямо под блоком «Зв'яжіться з нами» */
-        margin-top: 0;
-        padding-left: calc(var(--bs-gutter-x) * 0.5);   /* тот же отступ, что у текста колонки */
-        justify-content: flex-start;
+        position: absolute;
+        right: calc(var(--bs-gutter-x) * 0.5);
+        bottom: 16px;
+        width: auto;
+        margin: 0;
+        padding: 0;
     }
 }
 @media (max-width: 767.98px) {
@@ -2551,5 +2559,124 @@ html {
 @media (max-width: 480px) {
     .site-header .nav-link {
         font-size: 14px;                /* было 12–13.5px */
+    }
+}
+
+
+/* =====================================================
+   КАРТОЧКИ: НАЗВАНИЕ / ПОДПИСЬ / ЦЕНА СТРОГО НА ОДНОМ УРОВНЕ
+   Каждая карточка берёт общие строки сетки (subgrid): высота строки
+   «название» равна самому длинному названию в ряду, так же для подписи
+   и цены. Работает при любом числе строк в названии.
+   ===================================================== */
+@supports (grid-template-rows: subgrid) {
+    .products-grid {
+        --card-row-gap: 65px;
+        row-gap: 0;                              /* расстояние между рядами теперь у карточек */
+        margin-bottom: calc(var(--card-row-gap) * -1);
+    }
+    .product-card {
+        display: grid;
+        grid-row: span 4;                        /* картинка, название, подпись, цена */
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        margin-bottom: var(--card-row-gap);
+    }
+    .product-info {
+        display: contents;                       /* название, подпись и цена становятся строками карточки */
+    }
+    .product-info h2 {
+        min-height: 0;
+        margin: 20px 0 7px;
+    }
+    .product-info p {
+        min-height: 0;
+    }
+    .product-info .product-price {
+        margin-top: 0;
+        align-self: start;
+    }
+}
+@media (max-width: 767px) {
+    .products-grid { --card-row-gap: 45px; }
+}
+@media (max-width: 575px) {
+    .products-grid { --card-row-gap: 35px; }
+}
+
+
+/* =====================================================
+   iPad mini (768), iPad Air (820), Surface Pro 7 (912): шрифты ещё крупнее
+   ===================================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* шапка и фильтр */
+    .site-header .nav-link {
+        font-size: 19px;
+    }
+    .filter-btn {
+        font-size: 20px;
+    }
+
+    /* карточки */
+    .product-info h2 {
+        font-size: 22px;
+    }
+    .product-info p {
+        font-size: 18px;
+    }
+    .product-price {
+        font-size: 20px;
+    }
+
+    /* футер */
+    .footer-description,
+    .footer h5 {
+        font-size: 16px;
+    }
+    .footer-links a,
+    .footer-contact {
+        font-size: 18px;
+    }
+    .footer-links li,
+    .footer-contact {
+        margin-bottom: 6px;
+    }
+    .footer-socicons span {
+        font-size: 32px;
+    }
+    .up-button {
+        font-size: 40px;
+    }
+    .footer-bottom span,
+    .footer-copy,
+    .footer-love {
+        font-size: 16px;
+    }
+
+    /* главная, контакты, окно товара */
+    .about-label {
+        font-size: 15px;
+    }
+    .about-text {
+        font-size: 19px;
+    }
+    .rmr-showcase-kicker {
+        font-size: 14px;
+    }
+    body.contacts-page .contact-main {
+        font-size: 18px;
+    }
+    body.contacts-page .contact-note {
+        font-size: 15px;
+    }
+    body.contacts-page .rmr-button,
+    .modal-order-btn {
+        font-size: 17px;
+    }
+    .modal-category {
+        font-size: 15px;
+    }
+    .rmr-order-modal .form-label {
+        font-size: 16px;
     }
 }
