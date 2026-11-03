@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+ 
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Ювелірна майстерня RMR</title>
+ </head>         
+
+
+<body>    
+    <header class="site-header">
+        <div class="container-fluid">
+        <div class="row align-items-center">
+    
+        <!-- ЛЕВАЯ ЧАСТЬ МЕНЮ -->    
+        <div class="col-lg-5 col-md-5 col-4">
+        <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav flex-row gap-lg-4 gap-2">
+                <li class="nav-item active">  <a class="nav-link" href="index.html"> Головна </a> </li>   
+                <li class="nav-item"> <a class="nav-link"  href="catalog.html">  Каталог </a> </li>             
+                             
+            </ul>                    
+        </nav>                            
+        </div>                   
+                                
+        <!-- ЦЕНТРАЛЬНЫЙ ЛОГОТИП -->                          
+        <div class="col-lg-2 col-md-2 col-4">                     
+        <div class="logo-box text-center"> 
+        <img src="images/logotip.png" class="logo img-fluid" alt="Ювелірна майстерня">
+        <div class="diamond-wrap">                       
+        <img src="images/diamond.png" class="logo-diamond" alt="Діамант"> </div>
+         </div> 
+        </div>      
+
+        <!-- ПРАВАЯ ЧАСТЬ МЕНЮ -->
+        <div class="col-lg-5 col-md-5 col-4">
+        <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav flex-row justify-content-end gap-lg-4 gap-2 w-100"> 
+               <li class="nav-item"> <a class="nav-link" href="packaging.html"> Футляри </a> </li>
+               <li class="nav-item"> <a class="nav-link" href="contacts.html"> Контакти </a> </li> </ul>
+        </nav>                        
+        </div>                          
+        </div>                           
+        </div>                       
+         </header>  
+
+
+
+         <main>
+
+          <!-- ================================================
+               СЦЕНА З ВІДЕО
+               Блок .hero «прилипає» до верху екрана (position: sticky),
+               поки наступна секція піднімається і накриває його.
+               ================================================ -->
+          <div class="rmr-video-stage">
+              <section class="hero" aria-label="Відео про майстерню RMR">
+  
+                  <!-- СЛАЙД 1 -->
+                  <article class="about-slide is-active">
+                      <video class="about-video" autoplay muted loop playsinline preload="auto">
+                          <source src="videos/video1.mp4" type="video/mp4">
+                      </video>
+                      <div class="about-dark"></div>
+                      <div class="container-fluid h-100">
+                          <div class="row h-100 align-items-center">
+                              <div class="col-lg-7 col-md-8 col-11 about-content">
+                                  <span class="about-label">Ювелірна майстерня</span>
+                                  <h1 class="about-title">Авторські прикраси <br> ручної роботи</h1>
+                                  <p class="about-text">Ми створюємо ювелірні прикраси, в яких поєднуються традиції майстерності, сучасний дизайн та індивідуальність.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </article>
+  
+                  <!-- СЛАЙД 2 -->
+                  <article class="about-slide">
+                      <video class="about-video" muted loop playsinline preload="metadata">
+                          <source src="videos/video2.mp4" type="video/mp4">
+                      </video>
+                      <div class="about-dark"></div>
+                      <div class="container-fluid h-100">
+                          <div class="row h-100 align-items-center">
+                              <div class="col-lg-7 col-md-8 col-11 about-content">
+                                  <span class="about-label">НАШ ПРОЦЕС</span>
+                                  <h1 class="about-title">Кожна деталь<br> має значення</h1>
+                                  <p class="about-text">Від першого ескізу до останнього штриха кожна прикраса проходить через руки майстра.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </article>
+  
+                  <!-- СЛАЙД 3 -->
+                  <article class="about-slide">
+                      <video class="about-video" muted loop playsinline preload="metadata">
+                          <source src="videos/video3.mp4" type="video/mp4">
+                      </video>
+                      <div class="about-dark"></div>
+                      <div class="container-fluid h-100">
+                          <div class="row h-100 align-items-center">
+                              <div class="col-lg-7 col-md-8 col-11 about-content">
+                                  <span class="about-label">НАШІ ПРИКРАСИ</span>
+                                  <h1 class="about-title">Ваша історія<br>у кожній прикрасі</h1>
+                                  <p class="about-text">Ми створюємо речі, які стають частиною особливих моментів і залишаються з вами на довгі роки.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </article>
+  
+                  <!-- СЛАЙД 4 -->
+                  <article class="about-slide">
+                      <video class="about-video" muted loop playsinline preload="metadata">
+                          <source src="videos/video4.mp4" type="video/mp4">
+                      </video>
+                      <div class="about-dark"></div>
+                      <div class="container-fluid h-100">
+                          <div class="row h-100 align-items-center">
+                              <div class="col-lg-7 col-md-8 col-11 about-content">
+                                  <span class="about-label">НАША ФІЛОСОФІЯ</span>
+                                  <h1 class="about-title">Створюємо те,<br>що залишається</h1>
+                                  <p class="about-text">Для нас ювелірне мистецтво — це більше, ніж прикраса. Це пам'ять, емоція та історія, яку хочеться зберегти.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </article>
+  
+                  <!-- СЧЁТЧИК -->
+                  <div class="about-counter">
+                      <span class="current">01</span> / 04
+                  </div>
+  
+                  <!-- SCROLL -->
+                  <div class="about-scroll">
+                      <span>SCROLL</span>
+                      <span class="about-scroll-line"></span>
+                  </div>
+  
+              </section>
+          </div>
+  
+  
+        <!-- ================================================
+                       СЕКЦІЯ З ФОТО І ОПИСОМ: піднімається на відео
+                       Сітка Bootstrap: container > row > col-lg-7 + col-lg-5
+                       ================================================ -->
+        <section class="rmr-workshop-section" id="rmr-workshop" aria-labelledby="rmr-workshop-title">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+        
+                    <!-- ФОТО ПРИКРАС (змінюються автоматично, див. home.js) -->
+                    <div class="col-12 col-lg-7">
+                        <div class="rmr-jewelry-showcase" aria-label="Прикраси майстерні RMR">
+                            <div class="rmr-jewelry-glow" aria-hidden="true"></div>
+                            <div class="rmr-jewelry-frame">
+                                <img class="rmr-jewelry-image is-visible" src="images/chief/1.png"alt="Діадема ручної роботи RMR"> 
+                                <img class="rmr-jewelry-image" src="images/chief/2.png" alt="Брошка ручної роботи RMR">
+                                <img class="rmr-jewelry-image" src="images/chief/3.png" alt="Підвіска ручної роботи RMR">
+                                <img class="rmr-jewelry-image" src="images/chief/4.png" alt="Сережки ручної роботи RMR">
+                                <img class="rmr-jewelry-image" src="images/chief/5.png" alt="Браслет ручної роботи RMR">
+                                <img class="rmr-jewelry-image" src="images/chief/6.png" alt="Брошка ручної роботи RMR">
+        
+                            </div>
+                            <div class="rmr-showcase-caption" aria-live="polite">
+                                <span class="rmr-showcase-kicker">RMR · HANDMADE JEWELRY</span>
+                                <span class="rmr-showcase-name">Мистецтво в деталях</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ОПИС: по центру на телефоні, зліва на широкому екрані -->
+                    <div class="col-12 col-lg-5">
+                        <div class="rmr-workshop-description text-left text-lg-start">
+                            <span class="rmr-workshop-overline d-block">НАША МАЙСТЕРНЯ</span>
+                            <h2 id="rmr-workshop-title">Мистецтво, створене вручну</h2>
+                            <p>Ювелірна майстерня RMR — це мистецтво створення авторських прикрас ручної роботи на замовлення.
+                                Кожен виріб
+                                починається з індивідуального спілкування з клієнтом, розробки дизайнерського ескізу та
+                                3D-моделювання, що
+                                дозволяє заздалегідь побачити майбутню прикрасу й узгодити кожну деталь. Ми втілюємо особисті
+                                побажання в
+                                унікальні вироби, поєднуючи сучасні технології з майстерністю ювеліра.</p>
+        
+                            <p> Кожна прикраса створюється вручну з особливою увагою до деталей, проходить ретельне фінальне
+                                опрацювання та
+                                підготовку до вручення. Завершальним штрихом стає подарункова упаковка, яку клієнт може обрати
+                                самостійно або довірити
+                                цей вибір нашим фахівцям відповідно до стилю виробу. Її вартість уже входить у загальну вартість
+                                замовлення, а кожна
+                                готова прикраса стає особливою історією, створеною саме для вас.</p>
+                            <a href="catalog.html" class="rmr-workshop-btn">Перейти до каталогу <i
+                                    class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+        </main>
+
+
+
+<!-- FOOTER -->
+<footer class="footer"> 
+    <div class="container">
+
+   <!-- ОСНОВНАЯ ЧАСТЬ FOOTER -->
+    <div class="row footer-main g-4">
+    
+   <!-- ЛОГОТИП -->
+    <div class="col-lg-3 col-md-6 col-12">
+    <div class="footer-column footer-brand"> 
+    <span class="footer-logo d-inline-block"><img src="images/logotipWithDiamond.png" alt="Ювелірна майстерня" class="img-fluid"> </span>        
+     <p class="footer-description"> Ювелірна майстерня </p>
+     </div>
+     </div>                         
+    
+    <!--  НАВИГАЦИЯ-->
+     <div class="col-lg-3 col-md-6 col-12">            
+     <div class="footer-column">            
+     <h5> Навігація </h5>
+        <ul class="footer-links list-unstyled">                    
+            <li> <a href="index.html"> Головна </a> </li>
+            <li> <a href="catalog.html"> Каталог </a> </li>
+            <li> <a href="packaging.html">Футляри </a> </li> 
+       </ul>                
+                 
+      </div>                          
+      </div>                            
+    
+     <!--  ИНФОРМАЦИЯ   -->          
+       <div class="col-lg-3 col-md-6 col-12">          
+       <div class="footer-column">
+       <h5>  Інформація  </h5>  
+            <ul class="footer-links list-unstyled">
+               <li> <a href="contacts.html"> Контакти </a> </li>
+               <li> <a href="contacts.html#delivery-payment"> Доставка та оплата </a> </li>         
+             <li> <a href="contacts.html#warranty"> Гарантія </a> </li>   
+            </ul>            
+       </div>
+       </div>              
+
+     <!-- КОНТАКТЫ -->   
+        <div class="col-lg-3 col-md-6 col-12">         
+        <div class="footer-column">         
+        <h5> Зв'яжіться з нами </h5>
+     
+     <!-- ТЕЛЕФОН -->                    
+        <p class="footer-contact">  +38 (000) 000-00-00  </p>
+                      
+     <!-- EMAIL -->
+        <p class="footer-contact"> 
+        <a href="mailto:info@rmr.net?subject=Замовлення прикрас">info@rmr.net</a> </p>    
+                            
+     <!-- СОЦСЕТИ -->
+        <div class="footer-socicons d-flex">
+            <span aria-label="Instagram"> <i class="fa-brands fa-instagram"></i> </span>
+            <span aria-label="Facebook"> <i class="fa-brands fa-square-facebook"></i> </span>
+            <span aria-label="Pinterest"> <i class="fa-brands fa-square-pinterest"></i> </span>
+            <span aria-label="Twitter"> <i class="fa-brands fa-square-twitter"></i> </span>  
+    </div>
+    </div>
+    </div>           
+    </div>
+           
+    <!-- НИЖНЯЯ ЧАСТЬ FOOTER  -->
+       <div class="footer-bottom row align-items-center">       
+           
+    <!-- КОПИРАЙТ -->
+    <div class="col-md-6 col-12">
+    <div class="footer-copy"> &copy;
+      <span class="year"></span>
+     <span> RMR. Ювелірна майстерня. Всі права захищені.</span>
+                       
+     </div>
+     </div>               
+                    
+    <!-- ТЕКСТ СПРАВА -->
+    <div class="col-md-6 col-12 text-md-end">
+    <div class="footer-love"> Створено з любов'ю до ювелірного мистецтва. </div>
+    </div>  
+    </div>
+    </div>            
+                  
+ </footer>
+                  
+                
+
+<script src="scripts/home.js"></script>
+<script src="scripts/diamond.js"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
